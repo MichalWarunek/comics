@@ -1,25 +1,26 @@
 
 import React from 'react';
-import Text from './Text';
+import ComicsContainer from './ComicsContainer';
+import Search from './Search';
 
 class AppComponent extends React.Component {
   constructor(){
     super();
-    this.state = { text: 'Not clicked!'};
+    
   }
 
-  onButtonClick(){
-    this.setState({ text: 'Clicked!'});
-  }
+//   componentDidMount() {
+//     this.ajax()
+// }
+
 
 
   render() {
     return (
       <div className="main">
-        <Text staticText="Text from child component"
-              clickText={this.state.text} />
-        <p>{this.state.text}</p>
-        <button onClick={this.onButtonClick.bind(this)}>Click</button>
+       <ComicsContainer comics={[1,2,3,4,5]} />
+       <Search title="FirstName" name="FirstName" value="Mickey" /><br />
+       <Search title="LastName" name="LastName" value="Mouse" />
       </div>
     );
   }
