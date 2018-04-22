@@ -3,11 +3,11 @@ import React from 'react';
 
 
 class Search extends React.Component {
-  constructor(props){
-    console.log(props);
-    super(props);
-    this.state={test:"default"};
-  }
+  // constructor(props){
+  //   console.log(props);
+  //   super(props);
+  //   this.state={test:"default"};
+  // }
 
 
 
@@ -15,8 +15,13 @@ class Search extends React.Component {
   render() {
     return (
         <div>
-        {this.props.title}
-        <input type="text" name={this.props.name} value={this.props.value} />
+        <div className="col-md-12">
+        <input className="form-control" type="text" />
+        </div>
+       
+        {/* {this.props.title}
+        <input type="text" name={this.props.name} value={this.props.value} /> */}
+        
       
         </div>
     );
